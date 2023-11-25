@@ -1,0 +1,631 @@
+@import "variables";
+@import "font";
+@import "services";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;    
+}    
+
+.main-box {
+    background-color: #323264;    
+    height: 110vh; 
+    position: relative;
+    .main-logo {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        
+        img {            
+            position: absolute;            
+            }
+    }    
+    
+    header {
+        max-width: 100%;
+        padding: 50px 60px 16px 60px;
+        align-items: center;
+        background-color: #323264; 
+        
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;            
+    
+            .logo {
+                display: flex;
+                padding-left: 4px;
+                font-size: 2.25rem;
+                font-family: $font-primary;
+                color: white;    
+            }
+    
+            .header-nav {
+                display: flex;
+                flex-direction: column;
+                color: white;
+    
+                .nav-inform {
+                    ul {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        span>button {
+                            background-color: #F0145A;
+                            color: white;                               
+                        }
+    
+                        button {
+                            text-align: center;
+                            font-family: $font-bold;
+                            font-size: 0.75rem;
+                            border-radius: 8px;
+                            border: 0 solid #F5F5FA;
+                            background-color: white;
+                            padding: 5px 7px;
+                        }
+    
+                        span>li {
+                            display: contents;
+                            align-items: center;
+                            font-family: $font-bold;
+                            font-size: 1rem;
+                        }
+    
+                        li {
+                            list-style: none;
+                            padding-left: 6px;
+                            font-family: $font-primary;
+                            color: white;
+                            font-size: 1rem;
+                            margin-top: 8px;
+                            
+                        }
+                    }
+                }
+    
+                .nav-menu {
+                    display: flex;
+                    justify-content: right;
+                    margin-top: 16px;
+                        
+                    a {
+                        text-decoration: none;
+                        padding-left: 15px;
+                        font-family: $font-bold;
+                        font-size: 1rem;
+                        color: white;
+                    }
+                    a:hover {
+                        color: #F0145A;
+                        transition: 0.5s;
+                    }
+    
+                }
+            }
+        }    
+        
+    }
+
+    .section-hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;     
+        position: absolute;        
+        max-width: 100%;
+        margin: 310px 730px;
+        
+        h2 {
+            font-size: 2.37rem;
+            color: white;
+            font-family: $font-bold;          
+            padding-bottom: 380px;
+            
+        }
+    
+        img {
+            cursor: pointer;
+            width: 8%;
+        }
+    }
+} 
+
+
+main {   
+
+    
+    .gradient-bg {
+        background: linear-gradient(35deg, #643E72 0%, #323264 35%, #323264 100%);
+            height: 120vh;
+            border-radius: 0 0 12px 12px;
+            padding: 20px;
+            position: relative;            
+    }  
+    .gradient-bg::before {
+        content: "";
+        background-color: #CACADB;
+        width: 97.2%;
+        height: 50px;
+        border-radius: 0 0 12px 12px;
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }            
+    
+    .gradient-bg::after {
+        content: "";
+        background-color: #E7E7F2;
+        width: 95.2%;
+        height: 50px;
+        border-radius: 0 0 12px 12px;
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -2;
+    }     
+                     
+    .box-inform  { 
+        display: flex;
+        align-items: center;
+        max-width: 100%;
+                
+        .inform-list { 
+            display: flex;
+            justify-content: space-between;            
+            flex-direction: column;
+            border-right: 4px solid #FFFFFF4D;
+            padding-right: 60px;
+            margin-left: 250px;
+            width: 45%;
+                
+            .gradient {
+                    li {
+                        color: transparent;
+                        background: linear-gradient(to right, #EF8080, #F0145A);
+                        -webkit-background-clip: text;
+                    }                        
+            }                  
+            ul {
+                list-style: none;
+                cursor: pointer; 
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;                    
+                    
+                span> li:hover {
+                    color: #F0145A;
+                    transition: 0.5s;
+                }                     
+                    
+                li {
+                    font-family: $font-bold;
+                    font-size: 2rem;
+                    color: #B3B3BA;
+                    text-align: right;
+                    padding-bottom: 30px;
+                    display: block;
+                    text-wrap: nowrap;                        
+                }
+            }
+        }
+    }                  
+@media screen and (max-width: 768px) {
+    .inform-list {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        max-width: 100%;
+    }
+
+}
+
+    .information {
+        margin: 73px 280px 73px 60px;
+                
+        h3 {
+            font-family: $font-bold;
+            font-size: 1.87rem;
+            color: #FFFFFF;
+            line-height: 36.57px;
+            }
+                
+        p {
+            font-family: $font-primary;
+            font-size: 1.18rem;
+            color: #FFFFFF;
+            line-height: 30px;
+             padding-top: 30px;
+        }
+    }
+        
+    .box-inform-2 {
+
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        margin-left: 160px;
+        margin-bottom: 60px;
+        max-width: 88%;
+                
+        h5 {
+            font-family: $font-bold;
+            font-size: 0.87rem;
+            color: #B3B3BA;
+            line-height: 17.07px;
+            cursor: pointer;
+        }
+        h5:hover {
+            color: #F0145A;
+            transition: 0.5s;
+        }
+                
+        h3 {
+            font-family: $font-bold;
+            font-size: 2.37rem;
+            background: linear-gradient(to right, #F0145A, #EF8080);
+            -webkit-background-clip: text;
+            color: transparent;
+            line-height: 46.32px;
+        }
+                
+        .card-list {
+            display: flex;
+            justify-content: left;
+            max-width: 88%;
+            flex-wrap: wrap;
+                
+            .card-1 {
+                        width: 33%;
+                        padding: 60px 60px 60px 0;
+                
+                        img {
+                            padding-bottom: 30px;
+                        }
+                
+                        h4 {
+                            font-family: $font-bold;
+                            font-size: 1.37rem;
+                            color: #24A3FF;
+                        }
+                
+                        p {
+                            font-family: $font-primary;
+                            font-size: 1rem;
+                            color: white;
+                            line-height: 26px;
+                        }
+                }
+                
+            .card-2 {
+                        width: 33%;
+                        padding: 60px 60px 60px 0;
+                
+                        img {
+                            padding-bottom: 30px;
+                        }
+                
+                        h4 {
+                            font-family: $font-bold;
+                            font-size: 1.37rem;
+                            color: #24A3FF;
+                        }
+                
+                        p {
+                            font-family: $font-primary;
+                            font-size: 1rem;
+                            color: white;
+                            line-height: 26px;
+                        }
+                }
+                
+            .card-3 {
+                        width: 33%;
+                        padding: 60px 0 60px 0;
+                
+                        img {
+                            padding-bottom: 30px;
+                        }
+                
+                        h4 {
+                            font-family: $font-bold;
+                            font-size: 1.37rem;
+                            color: #24A3FF;
+                        }
+                
+                        p {
+                            font-family: $font-primary;
+                            font-size: 1rem;
+                            color: white;
+                            line-height: 26px;
+                        }
+                }
+                
+            .card-4 {
+                        width: 33%;
+                        padding: 0 60px 60px 0;
+                
+                        img {
+                            padding-bottom: 30px;
+                        }
+                
+                        h4 {
+                            font-family: $font-bold;
+                            font-size: 1.37rem;
+                            color: #24A3FF;
+                        }
+                
+                        p {
+                            font-family: $font-primary;
+                            font-size: 1rem;
+                            color: white;
+                            line-height: 26px;
+                        }
+                }
+                
+            .card-5 {
+                        width: 33%;
+                        padding: 0 60px 60px 0;
+                
+                        img {
+                            padding-bottom: 30px;
+                        }
+                
+                        h4 {
+                            font-family: $font-bold;
+                            font-size: 1.37rem;
+                            color: #24A3FF;
+                        }
+                
+                        p {
+                            font-family: $font-primary;
+                            font-size: 1rem;
+                            color: white;
+                            line-height: 26px;
+                        }
+                }
+                
+            .card-6 {
+                        width: 33%;
+                
+                        img {
+                            padding-bottom: 30px;
+                        }
+                
+                        h4 {
+                            font-family: $font-bold;
+                            font-size: 1.37rem;
+                            color: #24A3FF;
+                        }
+                
+                        p {
+                            font-family: $font-primary;
+                            font-size: 1rem;
+                            color: white;
+                            line-height: 26px;
+                        }
+            }
+        } 
+    }                           
+}
+
+
+.inform-bg-white {
+    display: flex;
+    margin: 60px 160px 46px;
+    
+    .inform-bg-white-text {
+        h5 {
+            font-size: 0.87rem;
+            color: #24A3FF;
+            font-family: $font-bold;
+            padding: 30px 1053px 5px 30px;
+        }    
+        h4 {
+            font-size: 2.37rem;
+            background: linear-gradient(to right, #F0145A, #EF8080);
+            -webkit-background-clip: text;
+            color: transparent;
+            font-family: $font-bold;
+            padding: 0 30px 30px 30px;
+        }  
+        p {
+            font-size: 1rem;
+            color: #B3B3BA;
+            font-family: $font-bold;
+            padding: 0 30px 6px 30px;
+            span {
+                font-size: 0.87rem;
+                font-family: $font-primary;
+            }
+        }  
+    }
+}
+
+.ellipse {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+    img {
+        padding-left: 15px;
+        margin-bottom: 60px;        
+    }  
+}
+
+.box-img {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    h5 {
+        font-size: 0.87rem;
+        font-family: $font-bold;
+        margin-bottom: 30px;
+        color: #323264;
+        text-transform: uppercase;
+    }
+    .img-list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-bottom: 60px;
+    }
+
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #F5F5FA;
+    max-width: 100%;
+    
+    h5 {
+        color: #24A3FF;
+        font-size: 0.87rem;
+        font-family: $font-bold;
+        margin-bottom: 10px;
+        padding: 30px 0 0 160px;
+    }
+    
+    h3 {
+        color: transparent;
+        background: linear-gradient (to right, #F0145A, #EF8080);
+        -webkit-background-clip: text;
+        font-size: 2.37rem;
+        font-family: $font-bold;
+        margin-bottom: 30px;
+        padding-left: 160px;
+    }
+    
+    .card-list {
+        padding-left: 160px;
+        display: flex;
+        align-items: center;
+         width: 100%;
+        border-bottom: 2px solid #E6E6F0;
+    
+        .card-list-1 {
+            margin-right: 30px;
+            max-width: 30%;
+            margin-bottom: 30px;
+    
+            img {
+                padding-bottom: 30px;
+            }
+    
+            h2 {
+                color: #24A3FF;
+                font-size: 1rem;
+                font-family: $font-bold;
+                padding-left: 30px;
+                padding-bottom: -15px;
+            }
+    
+            h5 {
+                color: #B3B3BA;
+                font-size: 0.75rem;
+                font-family: $font-bold;
+                padding-left: 30px;
+                padding-bottom: 15px;
+                border-bottom: 4px solid #E6E6F0;
+            }
+    
+            p {
+                color: black;
+                font-size: 0.87rem;
+                font-family: $font-primary;
+                padding-bottom: 30px;
+            }
+        }
+    }    
+    .footer-last { 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        padding-left: 160px;
+        
+        .address-contacts {
+            display: flex;
+            flex-direction: column;
+            
+            .address {
+                padding: 30px 0 21px 0;
+                display: flex;                
+                align-items: center;  
+                
+                    p {
+                        font-family: $font-primary;
+                        font-size: 1rem;
+                        color: #323264;
+                        padding-right: 10px;
+                        .dot {
+                            width: 6px;
+                            height: 6px;
+                            padding-right: 7px;
+                                                       
+                        }
+                                             
+                        span {
+                            color: #24A3FF;
+                            font-family: $font-bold;                           
+                        }
+                                                
+
+                    }
+            }
+            
+            .contacts {
+                display: flex;
+                align-items: center;
+                p {
+                    font-family: $font-bold;
+                    font-size: 1rem;
+                    color: #46466E;
+                    padding: 0 7px;
+                    span {
+                        color: #24A3FF;                      
+                    }
+                }                
+            }
+        }   
+        .year {
+            font-family: $font-primary;
+            font-size: 1rem;
+            color: #B3B3BA;
+            margin-top: -30px;
+                       
+        }
+    }              
+}
+
+    
+                
+ 
+            
+
+
+    
+    
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+    
